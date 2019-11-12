@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Allan Paul Nefalar"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-11-10 05:17:58 PM"/>
+        <attribute name="created" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDE5LTExLTEwOzA1OjAwOjIwIFBNOzQwMDE="/>
+        <attribute name="edited" value="QWxsYW4gUGF1bCBOZWZhbGFyO0xBUFRPUC02VVBSSTJOSTsyMDE5LTExLTEwOzA1OjE3OjU4IFBNOzE7NDEyOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Hi there user, ready to identify numbers?&quot;" newline="True"/>
+            <declare name="Number" type="Integer" array="False" size=""/>
+            <declare name="OddorEven" type="Integer" array="False" size=""/>
+            <declare name="ExitCode" type="Boolean" array="False" size=""/>
+            <assign variable="ExitCode" expression="True"/>
+            <while expression="ExitCode = True">
+                <output expression="&quot;Input desired number&quot;" newline="True"/>
+                <input variable="Number"/>
+                <assign variable="OddorEven" expression="Number / 2"/>
+                <if expression="OddorEven = 0">
+                    <then>
+                        <output expression="&quot;The number is Even&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <output expression="&quot;The Number is Odd&quot;" newline="True"/>
+                    </else>
+                </if>
+                <output expression="&quot;Retry?&quot;" newline="True"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
